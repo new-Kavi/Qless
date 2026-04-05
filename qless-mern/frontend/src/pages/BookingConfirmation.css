@@ -1,0 +1,223 @@
+.checkout-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 3rem 1.5rem;
+}
+
+.checkout-layout {
+  display: flex;
+  gap: 2rem;
+  max-width: 900px;
+  width: 100%;
+}
+
+.checkout-summary {
+  flex: 1.2;
+  background-color: var(--color-surface);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-border);
+}
+
+.payment-column {
+  flex: 1;
+  background-color: var(--color-background);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem 2rem;
+  box-shadow: var(--shadow-md);
+  display: flex;
+  flex-direction: column;
+}
+
+.summary-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  border-bottom: 1px dashed var(--color-border);
+  padding-bottom: 1rem;
+}
+
+.summary-details h3 {
+  font-size: 1.5rem;
+}
+
+.summary-location {
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+}
+
+.summary-slot-card {
+  background-color: var(--color-primary-light);
+  padding: 1.5rem;
+  border-radius: var(--radius-md);
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.sc-label {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  opacity: 0.8;
+  color: var(--color-text-main);
+  margin-bottom: 0.5rem;
+}
+
+.sc-time {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.cost-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+}
+
+.total-row {
+  border-top: 1px solid var(--color-border);
+  padding-top: 1rem;
+  margin-top: 0.5rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-text-main);
+}
+
+.payment-column h2 {
+  margin-bottom: 1.5rem;
+  font-size: 1.25rem;
+}
+
+.payment-simulation-box {
+  background-color: var(--color-surface);
+  border: 1px dashed var(--color-primary);
+  border-radius: var(--radius-md);
+  padding: 3rem 2rem;
+  text-align: center;
+  margin-bottom: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.shield-icon {
+  color: var(--color-secondary);
+  background-color: #DEF7EC;
+  padding: 0.75rem;
+  border-radius: var(--radius-full);
+}
+
+.payment-simulation-box p {
+  font-weight: 600;
+  color: var(--color-text-main);
+}
+
+.fake-card-hint {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+.pay-btn {
+  padding: 1rem !important;
+  font-size: 1.1rem !important;
+  margin-top: 2rem;
+}
+
+/* Success Layout */
+.success-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 70px);
+}
+
+.success-card {
+  background-color: var(--color-surface);
+  border-radius: var(--radius-lg);
+  padding: 4rem 3rem;
+  box-shadow: var(--shadow-lg);
+  text-align: center;
+  width: 100%;
+  max-width: 500px;
+}
+
+.success-icon {
+  color: var(--color-secondary);
+  margin-bottom: 1.5rem;
+}
+
+.success-card h1 {
+  font-size: 2rem;
+  color: var(--color-text-main);
+  margin-bottom: 0.5rem;
+}
+
+.success-msg {
+  color: #7F8C8D;
+  margin-bottom: 2rem;
+}
+
+.receipt-box {
+  background-color: var(--color-background);
+  padding: 1.5rem;
+  border-radius: var(--radius-md);
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.receipt-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.75rem 0;
+  border-bottom: 1px dashed var(--color-border);
+}
+
+.receipt-row:last-child {
+  border-bottom: none;
+}
+
+.receipt-row span {
+  color: var(--color-text-muted);
+}
+.receipt-row strong {
+  color: var(--color-text-main);
+}
+
+/* Emergency Styling */
+.summary-slot-card.em-card {
+  background-color: #FEE7E6;
+  border: 1px dashed var(--color-danger);
+}
+
+.sc-label.em-label {
+  color: var(--color-danger);
+}
+
+.sc-time.em-time {
+  color: var(--color-danger);
+  font-size: 1.25rem;
+}
+
+.em-reason-box {
+  background-color: var(--color-background);
+  padding: 1rem;
+  border-radius: var(--radius-sm);
+  border-left: 3px solid var(--color-danger);
+  margin-bottom: 2rem;
+  font-size: 0.95rem;
+  color: var(--color-text-main);
+}
+
+@media (max-width: 768px) {
+  .checkout-layout {
+    flex-direction: column;
+  }
+}

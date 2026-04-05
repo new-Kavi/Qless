@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* Core Calming Color Palette */
+  --color-primary: #4A90E2;      /* Soft Light Blue */
+  --color-primary-light: #abccf6;
+  --color-secondary: #50E3C2;    /* Pastel Green */
+  --color-accent: #b4e1ff;       /* Soft Cyan Accent */
+  
+  /* Neutral Palette */
+  --color-background: #F4F7F6;   /* Off-white, soft breathing room */
+  --color-surface: #FFFFFF;      /* Clean White Cards */
+  --color-text-main: #2C3E50;    /* Dark Gray/Blue for good contrast but soft */
+  --color-text-muted: #7F8C8D;
+  --color-border: #E8ECEF;
+  --color-danger: #FF6B6B;       /* Soft Red for leave queue/errors */
+  --color-danger-light: #ffebf0;
+
+  /* Typography */
+  --font-main: 'Inter', sans-serif;
+  
+  /* Shapes & Shadows */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-full: 9999px;
+  
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 24px rgba(0, 0, 0, 0.08);
+  --shadow-inset: inset 0 2px 4px rgba(0, 0, 0, 0.03);
+
+  /* Transitions */
+  --transition-fast: 0.15s ease;
+  --transition-smooth: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Global Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--color-background);
+  color: var(--color-text-main);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Base Headings */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-text-main);
+  font-weight: 600;
+  margin-bottom: 0.5em;
+  line-height: 1.2;
+}
+
+p {
+  color: var(--color-text-muted);
+  font-size: 1rem;
+}
+
+/* Base Links & Buttons Reset */
+a {
+  text-decoration: none;
+  color: var(--color-primary);
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: #357ABD;
+}
+
+button {
+  font-family: var(--font-main);
+  border: none;
+  background: none;
+  cursor: pointer;
+  outline: none;
+}
+
+button:focus-visible {
+  box-shadow: 0 0 0 3px var(--color-primary-light);
+}
+
+input, select, textarea {
+  font-family: var(--font-main);
+}
+
+/* Layout Container */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.page-wrapper {
+  padding: 2rem 0;
+  flex-grow: 1;
+}
+
+/* Utility Animations */
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-fade-in {
+  animation: fadeIn var(--transition-smooth);
+}
+.animate-slide-down {
+  animation: slideDown var(--transition-smooth);
+}
